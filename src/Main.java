@@ -16,8 +16,10 @@ public class Main {
             String word = bufferedReader.readLine();
 
             if (start.equals("N") || start.equals("n")) {
-                System.out.println(word);
-                System.out.println("Введите букву: ");
+                for (int i = 0; i < word.length(); i++) {
+                    System.out.print("*");
+                }
+                System.out.println("\nВведите букву: ");
                 String letter = scanner.nextLine();
             }
         }
