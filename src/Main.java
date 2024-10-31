@@ -2,6 +2,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Main {
@@ -17,20 +18,24 @@ public class Main {
 
             if (start.equals("Н") || start.equals("н")) {
                 int remainingLetters = word.length();
-                String findWord = "";
+                String[] s = new String[word.length()];
 
+                for (int i = 0; i < word.length(); i++) {
+                    System.out.print("*");
+                }
+
+                System.out.println("\nВведите букву: ");
                 while (remainingLetters > 0) {
-                    System.out.println("\nВведите букву: ");
 
                     String letter = scanner.nextLine();
                     for (int i = 0; i < word.length(); i++) {
 
                         if (Character.toLowerCase(word.charAt(i)) == Character.toLowerCase(letter.charAt(0))) {
-                            findWord = String.valueOf(word.charAt(i));
+                            s[i] = String.valueOf(word.charAt(i));
                             remainingLetters--;
                         }
                     }
-                    System.out.print(findWord);
+                    System.out.println(Arrays.toString(s));
                     for (int i = 0; i < word.length() - 1; i++) {
                         System.out.print("*");
                     }
