@@ -19,6 +19,8 @@ public class Main {
             if (start.equals("Н") || start.equals("н")) {
                 int remainingLetters = word.length();
                 String[] s = new String[word.length()];
+                Arrays.fill(s, "*");
+                String wordAfter = "";
 
                 for (int i = 0; i < word.length(); i++) {
                     System.out.print("*");
@@ -32,13 +34,11 @@ public class Main {
 
                         if (Character.toLowerCase(word.charAt(i)) == Character.toLowerCase(letter.charAt(0))) {
                             s[i] = String.valueOf(word.charAt(i));
+                            wordAfter = String.join("", s);
                             remainingLetters--;
                         }
                     }
-                    System.out.println(Arrays.toString(s));
-                    for (int i = 0; i < word.length() - 1; i++) {
-                        System.out.print("*");
-                    }
+                    System.out.println(wordAfter);
                 }
             }
         }
