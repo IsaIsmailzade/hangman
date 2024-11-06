@@ -1,28 +1,27 @@
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Path;
 import java.util.Arrays;
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) throws IOException {
+        String start;
+        String randomWord;
+        String wordAfter;
+        int remainingTries;
 
-        Path path = Path.of("Words.txt");
         System.out.println("[Н]овая игра или [В]ыйти");
 
-        try (Scanner scanner = new Scanner(System.in);
-             BufferedReader bufferedReader = Files.newBufferedReader(path)) {
-            String start = scanner.nextLine();
-            String word = bufferedReader.readLine();
-
+        try (Scanner scanner = new Scanner(System.in)) {
+            start = scanner.nextLine();
+            randomWord = RandomWordSelector.getRandomWord();
+            
             if (start.equals("Н") || start.equals("н")) {
-                int remainingLetters = word.length();
-                String[] s = new String[word.length()];
+                int remainingLetters = randomWord.length();
+                String[] s = new String[randomWord.length()];
                 Arrays.fill(s, "*");
-                String wordAfter = "";
+                wordAfter = "";
 
-                for (int i = 0; i < word.length(); i++) {
+                for (int i = 0; i < randomWord.length(); i++) {
                     System.out.print("*");
                 }
 
@@ -30,10 +29,10 @@ public class Main {
                 while (remainingLetters > 0) {
 
                     String letter = scanner.nextLine();
-                    for (int i = 0; i < word.length(); i++) {
+                    for (int i = 0; i < randomWord.length(); i++) {
 
-                        if (Character.toLowerCase(word.charAt(i)) == Character.toLowerCase(letter.charAt(0))) {
-                            s[i] = String.valueOf(word.charAt(i));
+                        if (Character.toLowerCase(randomWord.charAt(i)) == Character.toLowerCase(letter.charAt(0))) {
+                            s[i] = String.valueOf(randomWord.charAt(i));
                             wordAfter = String.join("", s);
                             remainingLetters--;
                         }
