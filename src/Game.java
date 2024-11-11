@@ -37,9 +37,10 @@ public class Game {
                 boolean correctGuess = false;
                 for (int i = 0; i < randomWord.length(); i++) {
                     if (Character.toLowerCase(randomWord.charAt(i)) == Character.toLowerCase(letter) && wordMask[i].equals("*")) {
-                            wordMask[i] = String.valueOf(randomWord.charAt(i));
-                            remainingLetters--;
-                            correctGuess = true;
+                        wordMask[i] = String.valueOf(randomWord.charAt(i));
+                        usedLetters.remove(Character.valueOf(letter));
+                        remainingLetters--;
+                        correctGuess = true;
                     }
                 }
 
@@ -51,14 +52,14 @@ public class Game {
                     Gallows.print(wrongLetters);
                 }
 
+                wordAfter = String.join("", wordMask);
+                System.out.println(wordAfter);
+                System.out.println("Использованные буквы: " + usedLetters);
+
                 if (wrongLetters == 6) {
                     System.out.println("Вы проиграли.");
                     System.exit(0);
                 } else if (remainingLetters == 0) System.out.println("Поздравляем! Вы выиграли!");
-
-                wordAfter = String.join("", wordMask);
-                System.out.println(wordAfter);
-                System.out.println("Использованные буквы: " + usedLetters);
 
             }
         }
