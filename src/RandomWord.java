@@ -4,7 +4,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.Random;
 
-public class RandomWordSelector extends Main {
+public class RandomWord extends Main {
 
     public static String getRandomWord() throws IOException {
         Random random = new Random();
