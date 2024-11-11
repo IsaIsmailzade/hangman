@@ -10,7 +10,6 @@ public class RandomWord extends Main {
         Random random = new Random();
         Path path = Path.of("words.txt");
         try (BufferedReader bufferedReader = Files.newBufferedReader(path)) {
-
             int randomNum = random.nextInt(100);
 
             return bufferedReader.lines()
