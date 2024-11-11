@@ -51,9 +51,9 @@ public class Game {
                 Gallows.print(wrongLetters);
             }
 
-            wordAfter = String.join("", wordMask);
-            System.out.println(wordAfter);
             System.out.println("Использованные буквы: " + usedLetters);
+            wordAfter = String.join("", wordMask);
+            System.out.println("\n" + wordAfter);
 
             if (wrongLetters == 6) {
                 System.out.println("Вы проиграли.");
