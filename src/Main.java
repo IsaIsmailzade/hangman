@@ -5,10 +5,10 @@ public class Main {
     public static void main(String[] args) throws IOException {
         String start;
 
-        System.out.println("[Н]овая игра или [В]ыйти");
         try (Scanner scanner = new Scanner(System.in)) {
 
             while (true) {
+                System.out.println("\n[Н]овая игра или [В]ыйти");
                 start = scanner.nextLine();
 
                 if (start.equals("Н") || start.equals("н")) {

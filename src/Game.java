@@ -12,6 +12,7 @@ public class Game {
 
     public static void start(Scanner scanner) throws IOException {
         randomWord = RandomWord.getRandomWord();
+//        System.out.println(randomWord);
 
         int remainingLetters = randomWord.length();
         String[] wordMask = new String[randomWord.length()];
@@ -25,7 +26,7 @@ public class Game {
         }
 
         System.out.println("\nВведите букву: ");
-        while (remainingLetters > 0) {
+        while (remainingLetters >= 0) {
 
             char letter = scanner.nextLine().charAt(0);
 
@@ -58,8 +59,10 @@ public class Game {
             if (wrongLetters == 6) {
                 System.out.println("Вы проиграли.");
                 break;
-            } else if (remainingLetters == 0) System.out.println("Поздравляем! Вы выиграли!");
-
+            } else if (remainingLetters == 0) {
+                System.out.println("Поздравляем! Вы выиграли!");
+                break;
+            }
         }
     }
 }
