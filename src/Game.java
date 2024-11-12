@@ -8,9 +8,10 @@ public class Game {
     static String randomWord;
     static String wordAfter;
     static List<Character> usedLetters;
-    static int attempts = 6;
+    static int attempts;
 
     public static void start(Scanner scanner) throws IOException {
+        attempts = 6;
         randomWord = RandomWord.getRandomWord();
 //        System.out.println(randomWord);
 
