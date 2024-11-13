@@ -48,12 +48,12 @@ public class Game {
             int wrongLetters = usedLetters.size();
             if (!correctGuess) {
                 attempts = attempts - 1;
-                System.out.println("Упс, такой буквы нет..");
+                System.out.println("\nУпс, такой буквы нет..");
                 System.out.println("У вас осталось: " + attempts + " попыток");
                 Gallows.print(wrongLetters);
             }
 
-            System.out.println("Использованные буквы: " + usedLetters);
+            System.out.println("Неправильные буквы: " + usedLetters);
             wordAfter = String.join("", wordMask);
             System.out.println("\n" + wordAfter);
 
