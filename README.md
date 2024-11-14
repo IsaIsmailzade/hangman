@@ -15,7 +15,7 @@
 
 ## Установка и запуск
 
-*На компьютере должен быть установлен Java Development Kit (JDK).*
+*Изначально должна быть установлена Intellij Idea.*
 
 1. Откройте терминал. Перейдите в директорию, куда будет устанавливаться программа.
 2. Клонируйте репозиторий
@@ -24,29 +24,11 @@
 git clone https://github.com/IsaIsmailzade/Hangman.git
 ```
 
-3. Перейдте в директорию проекта Hangman
+3. Перейдите и откройте проект в Intellij Idea
 
-```
-cd Hangman
-```
+4. Запустите класс Main
 
-4. Скомпилируйте программу
-
-```
-javac src/*.java -d classes
-```
-
-5. Создайте jar файл
-
-```
-jar -cvfm Hangman.jar resources/META-INF/MANIFEST.MF -C classes . -C resources Dictionary.txt
-```
-
-6. Запустите игру
-
-```
-java -jar Hangman.jar
-```
+5. Приятной игры!
 
 ---
 
