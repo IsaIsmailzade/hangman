@@ -9,7 +9,7 @@ public class RandomWord {
 
     public static String getRandomWord() throws IOException {
         Random random = new Random();
-        Path path = Path.of("src/words.txt");
+        Path path = Path.of("words.txt");
 
         List<String> words;
         try (BufferedReader bufferedReader = Files.newBufferedReader(path)) {
