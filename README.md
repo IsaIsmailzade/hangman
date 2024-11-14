@@ -21,7 +21,7 @@
 2. Клонируйте репозиторий
 
 ```
-git clone https://github.com/Nataliya1111/Hangman.git
+git clone https://github.com/IsaIsmailzade/Hangman.git
 ```
 
 3. Перейдте в директорию проекта Hangman
