@@ -8,9 +8,9 @@ public class Start {
             while (true) {
                 System.out.println("\n[Н]овая игра или [В]ыйти");
                 String start = scanner.nextLine();
-                if (start.equals("Н") || start.equals("н")) {
+                if (start.equalsIgnoreCase("н")) {
                     Game.start(scanner);
-                } else if (start.equals("В") || start.equals("в")) {
+                } else if (start.equalsIgnoreCase("в")) {
                     scanner.close();
                     System.exit(0);
                 } else System.out.println("Попробуйте снова");
