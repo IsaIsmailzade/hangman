@@ -1,6 +1,7 @@
 # Консольная игра "Виселица"
 
 Реализация игры "Виселица" с консольным интерфейсом на Java.
+[Подробное описание и ТЗ игры.](https://zhukovsd.github.io/java-backend-learning-course/projects/hangman/)
 
 ---
 
