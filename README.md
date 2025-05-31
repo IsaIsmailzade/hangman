@@ -22,7 +22,7 @@
 2. Клонируйте репозиторий
 
 ```
-git clone https://github.com/IsaIsmailzade/Hangman.git
+git clone https://github.com/IsaIsmailzade/hangman.git
 ```
 
 3. Перейдите и откройте проект в Intellij Idea
